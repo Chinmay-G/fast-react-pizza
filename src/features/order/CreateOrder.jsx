@@ -89,8 +89,9 @@ function CreateOrder() {
               </p>
             )}
           </div>
+          {/* Get Position Button */}
           {!position.latitude && !position.longitude && (
-            <span className="absolute top-[3px] right-[3px] z-50 md:top-[5px] md:right-[5px]">
+            <span className="top-[3px] right-[3px] z-50 sm:absolute md:top-[5px] md:right-[5px]">
               <Button
                 type="small"
                 disabled={isLoadingAddress}
@@ -120,6 +121,7 @@ function CreateOrder() {
           </label>
         </div>
 
+        {/* CART and Position data (used to send to the api) */}
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
           <input
